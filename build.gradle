@@ -9,7 +9,7 @@ version '1.0.7'
 repositories {
     mavenCentral()
     maven {
-        url = uri("https://maven.pkg.github.com/Terross/wise-task-library")
+        url = uri("https://maven.pkg.github.com/wisetask/wise-task-library")
         credentials {
             username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
             password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
@@ -38,7 +38,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/Terross/wise-task-library")
+            url = uri("https://maven.pkg.github.com/wisetask/wise-task-library")
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
