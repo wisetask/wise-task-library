@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'ru.leti'
-version '1.0.7'
+version '1.0.8'
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
