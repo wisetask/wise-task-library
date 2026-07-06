@@ -8,8 +8,8 @@ dependencyResolutionManagement {
         maven {
             url 'https://maven.pkg.github.com/wisetask/wise-task-library'
             credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+                username = System.getenv("USERNAME") ?: "wisetask"
+                password = System.getenv("TOKEN")
             }
         }
     }
