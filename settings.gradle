@@ -5,5 +5,12 @@ dependencyResolutionManagement {
     repositories {
         mavenCentral()
         maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://maven.pkg.github.com/wisetask/wise-task-library'
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
     }
 }
