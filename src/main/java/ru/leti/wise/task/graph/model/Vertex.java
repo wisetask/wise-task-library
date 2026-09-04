@@ -5,8 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @Builder
 @NoArgsConstructor
@@ -18,5 +16,4 @@ public class Vertex {
     private String label;
     private int xCoordinate;
     private int yCoordinate;
-
 }

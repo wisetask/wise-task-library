@@ -1,12 +1,12 @@
 package ru.leti.wise.task.graph.util;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ru.leti.wise.task.graph.model.Color;
 import ru.leti.wise.task.graph.model.Edge;
 import ru.leti.wise.task.graph.model.Graph;
 import ru.leti.wise.task.graph.model.Vertex;
+import tools.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,6 +18,11 @@ import java.util.stream.Collectors;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * @deprecated Use {@link JsonUtils} instead.
+ * Этот класс устарел и будет удален в следующих версиях.
+ */
+@Deprecated(since = "1.0.9" )
 public class FileLoader {
 
     private static final String NULL_VALUE = "null";
@@ -75,16 +80,16 @@ public class FileLoader {
             Color color = Color.valueOf(scanner.next());
             String weight = scanner.next();
             String label = scanner.next();
-            Double xCoordinate = scanner.nextDouble();
-            Double yCoordinate = scanner.nextDouble();
+            double xCoordinate = scanner.nextDouble();
+            double yCoordinate = scanner.nextDouble();
             vertices.add(Vertex
                     .builder()
                     .id(id)
                     .color(color)
                     .weight(weight.equals(NULL_VALUE) ? null : parseInt(weight))
                     .label(label)
-                    .xCoordinate(xCoordinate.intValue())
-                    .yCoordinate(yCoordinate.intValue())
+                    .xCoordinate((int) xCoordinate)
+                    .yCoordinate((int) yCoordinate)
                     .build());
         }
     }
